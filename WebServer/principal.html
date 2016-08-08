@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">  
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="TeamX"> 
+    <meta name="title" content="Recycler X">
+    <meta name="description" content="A intelligent trash can that recycle for you">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+    
+    <title>Recycler X</title>
+    
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+    <link href="css/business-frontpage.css" rel="stylesheet">
+
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="https://gstatic.com/charts/loader.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/underscore-min.js"></script>
+    <script type="text/javascript" src="js/chartDraw1.js"></script>
+    <script>
+        function refreshPage(){
+            window.location.reload(this);
+        }  
+    </script>
+  </head>
+  <body>
+    <div class="app">
+      <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+          <div class="container">
+              <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">We Recycle</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <!-- <ul class="nav navbar-nav">
+                <li>
+                  <a href="#">Nosotros</a>
+                </li>
+                <li>
+                  <a href="#">Servicios</a>
+                </li>
+                <li>
+                  <a href="#">Contactenos</a>
+                </li>
+              </ul>-->
+            </div>
+            <!-- /.navbar-collapse -->
+          </div>
+        <!-- /.container -->
+      </nav>
+      
+      <!-- Image Background Page Header -->
+      <!-- Note: The background image is set within the business-casual.css file. -->
+      <header class="business-header">
+          <div class="container">
+              <div class="row">       
+                  <!-- <div class="col-xs-6 col-sm-6"> -->
+                  <div class="col-md-4">
+                    <img id="logoEquipo" src="img/LogoXTeam.png">
+                      <!-- <h1 class="tagline">RecyclerX</h1> -->
+                  </div> 
+                  <div class="col-md-4">
+                  </div> 
+                  <div class="col-md-4">       
+                      <img id ="werecycle" src="img/logo.png">
+                  </div>
+              </div>
+          </div>
+        </header>
+        
+        <!-- Page Content -->
+        <div class="container">
+            
+            <hr>
+            
+            <div class="row">
+                <div class="col-lg-12">
+                  <h2 class="titulo">Nivel de los contenedores de basura</h2>
+                </div>
+            </div>
+            <div class="row">
+                <center><div class="col-md-4" id="chart_div1"></div>
+                <div class="col-md-4" id="chart_div2"></div>
+                <div class="col-md-4" id="chart_div3"></div></center>
+            </div>
+            <div class="row">
+              <center>
+                  <button type="button" onClick="refrescaPagina()">
+                      Refrescar
+                  </button>  
+              </center>
+            </div>
+        
+        <!-- Page Footer -->
+         <footer>
+             
+             <hr>
+             
+              <div class="row">
+                  <div class="col-lg-12">
+                      <p>Copyright &copy; We Recycle 2016 by TeamX. All rights reserved.</p>
+                  </div>
+              </div>
+              <!-- /.row -->
+          </footer>
+      </div>
+      <!-- /.container -->
+    </div>
+  </body>
+  <script type="text/javascript" src="codova.js"></script>
+  <script type="text/javascript" src="js/index.js"></script>
+  <script type="text/javascript">
+    app.initialize();
+  </script>
+  <script>
+    $(function() {
+      getData();
+    });
+  </script> 
+</html>
